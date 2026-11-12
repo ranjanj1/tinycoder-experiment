@@ -1,0 +1,1 @@
+Read RULES.md, SPEC.md and INTERFACE.md. Build tinycoder as lane {ID} using only {TECHNIQUES}. Pass the supplied visible tests (python3 tests/check.py bin/tinycoder). Do not inspect other versions, retrieve external implementations, modify the tests or alter the rules. Record your commands and summarize your design, choices where SPEC.md was silent, and limitations in NOTES.md.

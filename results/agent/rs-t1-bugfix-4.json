@@ -1,0 +1,39 @@
+{
+ "id": "rs-t1-bugfix-4",
+ "lane": "rs",
+ "task": "t1-bugfix",
+ "n": 4,
+ "build": "rs-optimize",
+ "model": "claude-sonnet-5-5",
+ "route": "OpenRouter, provider pinned to Anthropic",
+ "exit_code": 0,
+ "final": {
+  "status": "done",
+  "reason": null,
+  "steps": 4,
+  "tool_calls": 7,
+  "blocked_calls": 0,
+  "input_tokens": 9231,
+  "output_tokens": 706,
+  "wall_ms": 7205.098,
+  "llm_ms": 7113.130999999999,
+  "tool_ms": 78.697,
+  "final_text": "I fixed the ordering in `top_words` in `textstats.py`. Words with equal counts now come out alphabetically. The tests pass, including the existing ones.\n\nThe sort used only the count, in reverse, so tied words kept whatever order they had in the dictionary. It now sorts by count descending, then by word ascending.\n\nI added `test_top_ties_alphabetical` to `test_textstats.py`, using your example. It checks that `top_words(\"pear apple pear apple fig\", 3)` returns `[(\"apple\", 2), (\"pear\", 2), (\"fig\", 1)]`."
+ },
+ "harness_wall_s": 7.2,
+ "visible_tests_pass": true,
+ "hidden_tests_pass": true,
+ "model_calls": 4,
+ "http_statuses": [
+  200,
+  200,
+  200,
+  200
+ ],
+ "providers": [
+  "Anthropic"
+ ],
+ "cost_usd_openrouter": 0.025522,
+ "diff_lines": 25,
+ "started": "2026-11-11T17:32:59-0500"
+}

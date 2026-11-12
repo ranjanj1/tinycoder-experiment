@@ -1,0 +1,10 @@
+#!/bin/sh
+# tinycoder entry point (lane PY). Picks a Python 3.12 that has the `mcp` and `anthropic` SDKs:
+# $TINYCODER_PYTHON, then ./.venv, then the offline kit's venv, then python3 on PATH.
+root=$(cd "$(dirname "$0")/.." && pwd)
+for py in "${TINYCODER_PYTHON:-}" "$root/.venv/bin/python3" /Users/Shared/tc-kit/pyenv/bin/python3; do
+  if [ -n "$py" ] && [ -x "$py" ]; then
+    exec "$py" -I "$root/src/tinycoder/main.py" "$@"
+  fi
+done
+exec python3 -I "$root/src/tinycoder/main.py" "$@"

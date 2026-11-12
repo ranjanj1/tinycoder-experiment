@@ -1,0 +1,39 @@
+{
+ "id": "py-t2-feature-4",
+ "lane": "py",
+ "task": "t2-feature",
+ "n": 4,
+ "build": "py-optimize",
+ "model": "claude-sonnet-5-5",
+ "route": "OpenRouter, provider pinned to Anthropic",
+ "exit_code": 0,
+ "final": {
+  "status": "done",
+  "reason": null,
+  "steps": 4,
+  "tool_calls": 6,
+  "blocked_calls": 0,
+  "input_tokens": 10217,
+  "output_tokens": 1241,
+  "wall_ms": 11909.763,
+  "llm_ms": 11256.515,
+  "tool_ms": 90.042,
+  "final_text": "I added `remove(name, qty)` and `total()` to `Inventory` in `inventory.py`, and the tests pass (6 in total, including the 3 existing ones).\n\n- **`remove`**:\n  - It raises `KeyError` if the item isn't in stock.\n  - It raises `ValueError` if `qty` isn't a positive int or is more than the amount in stock.\n  - An item that reaches 0 is deleted, so it no longer shows up in `items()`.\n  - It also rejects `True` and `False` as quantities, because Python treats them as ints. The existing `add` doesn't do this check, so `add` still accepts them.\n- **`total`**: returns the sum of units across all items, and 0 for an empty inventory.\n\nI added three tests in `test_inventory.py`:\n- `remove` on its own, including the item disappearing at 0.\n- The error cases for `remove`, which also check that a failed call leaves the stock unchanged.\n- `total`."
+ },
+ "harness_wall_s": 11.9,
+ "visible_tests_pass": true,
+ "hidden_tests_pass": true,
+ "model_calls": 4,
+ "http_statuses": [
+  200,
+  200,
+  200,
+  200
+ ],
+ "providers": [
+  "Anthropic"
+ ],
+ "cost_usd_openrouter": 0.032844,
+ "diff_lines": 62,
+ "started": "2026-11-11T17:33:37-0500"
+}

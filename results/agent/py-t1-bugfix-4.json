@@ -1,0 +1,39 @@
+{
+ "id": "py-t1-bugfix-4",
+ "lane": "py",
+ "task": "t1-bugfix",
+ "n": 4,
+ "build": "py-optimize",
+ "model": "claude-sonnet-5-5",
+ "route": "OpenRouter, provider pinned to Anthropic",
+ "exit_code": 0,
+ "final": {
+  "status": "done",
+  "reason": null,
+  "steps": 4,
+  "tool_calls": 6,
+  "blocked_calls": 0,
+  "input_tokens": 9605,
+  "output_tokens": 632,
+  "wall_ms": 8057.469,
+  "llm_ms": 7423.855,
+  "tool_ms": 92.025,
+  "final_text": "`top_words` now puts words with equal counts in alphabetical order. The tests pass, including the new one.\n\nThe fix is in `textstats.py`. The sort key is now `(-count, word)` instead of count alone with `reverse=True`.\n\nI added `test_top_ties_alphabetical` to `test_textstats.py`. It checks your example: `top_words(\"pear apple pear apple fig\", 3)` returns `[(\"apple\", 2), (\"pear\", 2), (\"fig\", 1)]`."
+ },
+ "harness_wall_s": 8.1,
+ "visible_tests_pass": true,
+ "hidden_tests_pass": true,
+ "model_calls": 4,
+ "http_statuses": [
+  200,
+  200,
+  200,
+  200
+ ],
+ "providers": [
+  "Anthropic"
+ ],
+ "cost_usd_openrouter": 0.02553,
+ "diff_lines": 25,
+ "started": "2026-11-11T17:33:06-0500"
+}

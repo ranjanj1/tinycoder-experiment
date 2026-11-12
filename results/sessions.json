@@ -1,0 +1,93 @@
+{
+ "py-initial": {
+  "seconds": 1007.8,
+  "end": "agent_idle",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "api_calls": 61,
+  "output_tokens": 75262,
+  "cache_read_input_tokens": 6225148,
+  "estimated_usd_api_prices": 3.9465,
+  "network_allowed": [
+   "api.anthropic.com:443"
+  ]
+ },
+ "py-optimize": {
+  "seconds": 1809.0,
+  "end": "time_limit",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "api_calls": 84,
+  "output_tokens": 116738,
+  "cache_read_input_tokens": 20531734,
+  "estimated_usd_api_prices": 7.7563,
+  "network_allowed": [
+   "api.anthropic.com:443"
+  ]
+ },
+ "rs-initial": {
+  "seconds": 1813.3,
+  "end": "time_limit",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "api_calls": 64,
+  "output_tokens": 81382,
+  "cache_read_input_tokens": 6407350,
+  "estimated_usd_api_prices": 4.1295,
+  "network_allowed": [
+   "api.anthropic.com:443"
+  ]
+ },
+ "rs-optimize": {
+  "seconds": 1809.7,
+  "end": "time_limit",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "api_calls": 48,
+  "output_tokens": 58469,
+  "cache_read_input_tokens": 9672503,
+  "estimated_usd_api_prices": 3.7142,
+  "network_allowed": [
+   "api.anthropic.com:443"
+  ]
+ },
+ "ts-initial": {
+  "seconds": 790.0,
+  "end": "agent_idle",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "api_calls": 54,
+  "output_tokens": 59118,
+  "cache_read_input_tokens": 4106237,
+  "estimated_usd_api_prices": 2.8061,
+  "network_allowed": [
+   "api.anthropic.com:443"
+  ]
+ },
+ "ts-optimize": {
+  "seconds": 1809.2,
+  "end": "time_limit",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "api_calls": 77,
+  "output_tokens": 111557,
+  "cache_read_input_tokens": 14801700,
+  "estimated_usd_api_prices": 6.4121,
+  "network_allowed": [
+   "api.anthropic.com:443"
+  ]
+ },
+ "ts-repair": {
+  "seconds": 190.1,
+  "end": "agent_idle",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "api_calls": 11,
+  "output_tokens": 11094,
+  "cache_read_input_tokens": 2469607,
+  "estimated_usd_api_prices": 2.8905,
+  "network_allowed": [
+   "api.anthropic.com:443"
+  ]
+ }
+}

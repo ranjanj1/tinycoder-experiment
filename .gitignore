@@ -1,0 +1,7 @@
+sessions/private/bundle-*/
+__pycache__/
+.DS_Store
+.venv/
+sessions/private/
+builds/
+.env

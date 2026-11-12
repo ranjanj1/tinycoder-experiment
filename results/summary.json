@@ -1,0 +1,1080 @@
+{
+ "protocol_hash": "1ed675a9742bfc9638bc7aac090895000cb486b68263c76bcfde7c5f28bf4005",
+ "builder": "Claude Code, claude-opus-5-5, effort high, 30-minute cap per step",
+ "agent_model": "claude-sonnet-5-5, effort medium, via OpenRouter pinned to Anthropic",
+ "build_sessions": {
+  "py-initial": {
+   "seconds": 1007.8,
+   "end": "agent_idle",
+   "model": "claude-opus-5-5",
+   "effort": "high",
+   "api_calls": 61,
+   "output_tokens": 75262,
+   "cache_read_input_tokens": 6225148,
+   "estimated_usd_api_prices": 3.9465,
+   "network_allowed": [
+    "api.anthropic.com:443"
+   ]
+  },
+  "py-optimize": {
+   "seconds": 1809.0,
+   "end": "time_limit",
+   "model": "claude-opus-5-5",
+   "effort": "high",
+   "api_calls": 84,
+   "output_tokens": 116738,
+   "cache_read_input_tokens": 20531734,
+   "estimated_usd_api_prices": 7.7563,
+   "network_allowed": [
+    "api.anthropic.com:443"
+   ]
+  },
+  "rs-initial": {
+   "seconds": 1813.3,
+   "end": "time_limit",
+   "model": "claude-opus-5-5",
+   "effort": "high",
+   "api_calls": 64,
+   "output_tokens": 81382,
+   "cache_read_input_tokens": 6407350,
+   "estimated_usd_api_prices": 4.1295,
+   "network_allowed": [
+    "api.anthropic.com:443"
+   ]
+  },
+  "rs-optimize": {
+   "seconds": 1809.7,
+   "end": "time_limit",
+   "model": "claude-opus-5-5",
+   "effort": "high",
+   "api_calls": 48,
+   "output_tokens": 58469,
+   "cache_read_input_tokens": 9672503,
+   "estimated_usd_api_prices": 3.7142,
+   "network_allowed": [
+    "api.anthropic.com:443"
+   ]
+  },
+  "ts-initial": {
+   "seconds": 790.0,
+   "end": "agent_idle",
+   "model": "claude-opus-5-5",
+   "effort": "high",
+   "api_calls": 54,
+   "output_tokens": 59118,
+   "cache_read_input_tokens": 4106237,
+   "estimated_usd_api_prices": 2.8061,
+   "network_allowed": [
+    "api.anthropic.com:443"
+   ]
+  },
+  "ts-optimize": {
+   "seconds": 1809.2,
+   "end": "time_limit",
+   "model": "claude-opus-5-5",
+   "effort": "high",
+   "api_calls": 77,
+   "output_tokens": 111557,
+   "cache_read_input_tokens": 14801700,
+   "estimated_usd_api_prices": 6.4121,
+   "network_allowed": [
+    "api.anthropic.com:443"
+   ]
+  },
+  "ts-repair": {
+   "seconds": 190.1,
+   "end": "agent_idle",
+   "model": "claude-opus-5-5",
+   "effort": "high",
+   "api_calls": 11,
+   "output_tokens": 11094,
+   "cache_read_input_tokens": 2469607,
+   "estimated_usd_api_prices": 2.8905,
+   "network_allowed": [
+    "api.anthropic.com:443"
+   ]
+  }
+ },
+ "fix_rounds": {
+  "py": 0,
+  "ts": 1,
+  "rs": 0
+ },
+ "build_cost_estimate_usd_by_lane": {
+  "py": 11.7028,
+  "ts": 12.1087,
+  "rs": 7.8437
+ },
+ "sittings": {
+  "sitting-1": {
+   "meta": {
+    "started": "2026-11-11T16:21:30-0500",
+    "finished": "2026-11-11T16:32:47-0500",
+    "rounds": 5,
+    "seed": 20261111,
+    "cpu": "Apple M1",
+    "mem_bytes": 8589934592,
+    "power": "Now drawing from 'AC Power'",
+    "load_before": [
+     10.17724609375,
+     6.3642578125,
+     4.53515625
+    ],
+    "load_after": [
+     4.32373046875,
+     7.95263671875,
+     7.0185546875
+    ]
+   },
+   "py-initial": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "PY audit: OK (7 source files)"
+    },
+    "build_seconds": 0.11,
+    "source": {
+     "files": 7,
+     "lines": 825
+    },
+    "deps": {
+     "direct": 2,
+     "total": 32,
+     "needs_bytes": 46550463,
+     "needs_note": "src + the kit venv site-packages (shared kit)"
+    },
+    "startup_ms": {
+     "files": 306.005,
+     "shell": 308.57
+    },
+    "startup_ms_range": {
+     "files": [
+      304.215,
+      331.89
+     ],
+     "shell": [
+      304.39,
+      335.14
+     ]
+    },
+    "call_us": {
+     "read_file": 577.0,
+     "list_files": 598.5,
+     "search": 1675.5,
+     "write_file": 467.0,
+     "run_command": 3405.5
+    },
+    "server_rss_mb": {
+     "files": 64.7,
+     "shell": 64.31
+    },
+    "agent_fake_20_steps_ms": 961.3,
+    "agent_fake_20_steps_ms_range": [
+     960.0,
+     1199.8
+    ],
+    "agent_process_rss_mb": 105.97
+   },
+   "py-optimize": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "PY audit: OK (9 source files)"
+    },
+    "build_seconds": 0.06,
+    "source": {
+     "files": 9,
+     "lines": 1167
+    },
+    "deps": {
+     "direct": 2,
+     "total": 32,
+     "needs_bytes": 46590474,
+     "needs_note": "src + the kit venv site-packages (shared kit)"
+    },
+    "startup_ms": {
+     "files": 239.095,
+     "shell": 240.145
+    },
+    "startup_ms_range": {
+     "files": [
+      236.885,
+      258.465
+     ],
+     "shell": [
+      237.325,
+      260.97
+     ]
+    },
+    "call_us": {
+     "read_file": 508.0,
+     "list_files": 479.5,
+     "search": 1087.5,
+     "write_file": 331.5,
+     "run_command": 1739.0
+    },
+    "server_rss_mb": {
+     "files": 55.62,
+     "shell": 55.28
+    },
+    "agent_fake_20_steps_ms": 622.9,
+    "agent_fake_20_steps_ms_range": [
+     613.5,
+     687.2
+    ],
+    "agent_process_rss_mb": 73.45
+   },
+   "ts-initial": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "TS audit: OK (6 source files)"
+    },
+    "build_seconds": 2.93,
+    "source": {
+     "files": 6,
+     "lines": 931
+    },
+    "deps": {
+     "direct": 3,
+     "direct_dev": 2,
+     "total": 126,
+     "needs_bytes": 68648888,
+     "needs_note": "node_modules (incl. dev deps such as typescript) + dist"
+    },
+    "startup_ms": {
+     "files": 120.0,
+     "shell": 119.985
+    },
+    "startup_ms_range": {
+     "files": [
+      118.825,
+      130.505
+     ],
+     "shell": [
+      118.65,
+      126.935
+     ]
+    },
+    "call_us": {
+     "read_file": 239.5,
+     "list_files": 253.0,
+     "search": 762.5,
+     "write_file": 118.0,
+     "run_command": 1963.5
+    },
+    "server_rss_mb": {
+     "files": 72.09,
+     "shell": 64.27
+    },
+    "agent_fake_20_steps_ms": 414.0,
+    "agent_fake_20_steps_ms_range": [
+     409.8,
+     467.9
+    ],
+    "agent_process_rss_mb": 97.2
+   },
+   "ts-optimize": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "TS audit: OK (9 source files)"
+    },
+    "build_seconds": 4.38,
+    "source": {
+     "files": 9,
+     "lines": 1321
+    },
+    "deps": {
+     "direct": 3,
+     "direct_dev": 2,
+     "total": 126,
+     "needs_bytes": 79547564,
+     "needs_note": "node_modules (incl. dev deps such as typescript) + dist"
+    },
+    "startup_ms": {
+     "files": 83.65,
+     "shell": 82.095
+    },
+    "startup_ms_range": {
+     "files": [
+      81.58,
+      87.555
+     ],
+     "shell": [
+      81.38,
+      88.415
+     ]
+    },
+    "call_us": {
+     "read_file": 237.0,
+     "list_files": 203.5,
+     "search": 405.0,
+     "write_file": 118.0,
+     "run_command": 1681.5
+    },
+    "server_rss_mb": {
+     "files": 68.06,
+     "shell": 58.05
+    },
+    "agent_fake_20_steps_ms": 318.3,
+    "agent_fake_20_steps_ms_range": [
+     306.7,
+     395.3
+    ],
+    "agent_process_rss_mb": 95.31
+   },
+   "rs-initial": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "RS audit: OK (5 source files)"
+    },
+    "build_seconds": 88.12,
+    "source": {
+     "files": 5,
+     "lines": 1255
+    },
+    "deps": {
+     "direct": 8,
+     "total": 224,
+     "needs_bytes": 6519088,
+     "needs_note": "the release binary"
+    },
+    "startup_ms": {
+     "files": 5.815,
+     "shell": 5.57
+    },
+    "startup_ms_range": {
+     "files": [
+      5.66,
+      6.29
+     ],
+     "shell": [
+      5.52,
+      5.975
+     ]
+    },
+    "call_us": {
+     "read_file": 204.0,
+     "list_files": 177.5,
+     "search": 320.0,
+     "write_file": 131.5,
+     "run_command": 2475.0
+    },
+    "server_rss_mb": {
+     "files": 10.11,
+     "shell": 8.45
+    },
+    "agent_fake_20_steps_ms": 99.2,
+    "agent_fake_20_steps_ms_range": [
+     97.6,
+     109.0
+    ],
+    "agent_process_rss_mb": 20.03
+   },
+   "rs-optimize": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "RS audit: OK (8 source files)"
+    },
+    "build_seconds": 90.63,
+    "source": {
+     "files": 7,
+     "lines": 1421
+    },
+    "deps": {
+     "direct": 8,
+     "total": 224,
+     "needs_bytes": 2871792,
+     "needs_note": "the release binary"
+    },
+    "startup_ms": {
+     "files": 3.025,
+     "shell": 2.805
+    },
+    "startup_ms_range": {
+     "files": [
+      2.74,
+      3.22
+     ],
+     "shell": [
+      2.77,
+      3.23
+     ]
+    },
+    "call_us": {
+     "read_file": 200.0,
+     "list_files": 156.0,
+     "search": 301.0,
+     "write_file": 100.0,
+     "run_command": 2068.0
+    },
+    "server_rss_mb": {
+     "files": 5.12,
+     "shell": 3.62
+    },
+    "agent_fake_20_steps_ms": 101.7,
+    "agent_fake_20_steps_ms_range": [
+     93.6,
+     167.1
+    ],
+    "agent_process_rss_mb": 20.12
+   }
+  },
+  "sitting-2": {
+   "meta": {
+    "started": "2026-11-11T16:56:29-0500",
+    "finished": "2026-11-11T17:07:05-0500",
+    "rounds": 5,
+    "seed": 20261112,
+    "cpu": "Apple M1",
+    "mem_bytes": 8589934592,
+    "power": "Now drawing from 'AC Power'",
+    "load_before": [
+     2.64306640625,
+     2.8193359375,
+     3.392578125
+    ],
+    "load_after": [
+     4.73876953125,
+     5.87353515625,
+     5.20849609375
+    ]
+   },
+   "py-initial": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "PY audit: OK (7 source files)"
+    },
+    "build_seconds": 0.09,
+    "source": {
+     "files": 7,
+     "lines": 825
+    },
+    "deps": {
+     "direct": 2,
+     "total": 32,
+     "needs_bytes": 46550463,
+     "needs_note": "src + the kit venv site-packages (shared kit)"
+    },
+    "startup_ms": {
+     "files": 303.23,
+     "shell": 303.415
+    },
+    "startup_ms_range": {
+     "files": [
+      302.31,
+      304.375
+     ],
+     "shell": [
+      302.165,
+      305.335
+     ]
+    },
+    "call_us": {
+     "read_file": 551.0,
+     "list_files": 601.0,
+     "search": 1696.5,
+     "write_file": 463.5,
+     "run_command": 3475.5
+    },
+    "server_rss_mb": {
+     "files": 64.64,
+     "shell": 64.33
+    },
+    "agent_fake_20_steps_ms": 949.8,
+    "agent_fake_20_steps_ms_range": [
+     944.1,
+     957.1
+    ],
+    "agent_process_rss_mb": 105.97
+   },
+   "py-optimize": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "PY audit: OK (9 source files)"
+    },
+    "build_seconds": 0.07,
+    "source": {
+     "files": 9,
+     "lines": 1167
+    },
+    "deps": {
+     "direct": 2,
+     "total": 32,
+     "needs_bytes": 46590474,
+     "needs_note": "src + the kit venv site-packages (shared kit)"
+    },
+    "startup_ms": {
+     "files": 238.425,
+     "shell": 237.83
+    },
+    "startup_ms_range": {
+     "files": [
+      236.08,
+      238.87
+     ],
+     "shell": [
+      237.48,
+      238.435
+     ]
+    },
+    "call_us": {
+     "read_file": 483.0,
+     "list_files": 475.0,
+     "search": 1088.0,
+     "write_file": 330.5,
+     "run_command": 1889.5
+    },
+    "server_rss_mb": {
+     "files": 55.67,
+     "shell": 55.36
+    },
+    "agent_fake_20_steps_ms": 611.3,
+    "agent_fake_20_steps_ms_range": [
+     608.9,
+     617.3
+    ],
+    "agent_process_rss_mb": 73.44
+   },
+   "ts-initial": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "TS audit: OK (6 source files)"
+    },
+    "build_seconds": 2.29,
+    "source": {
+     "files": 6,
+     "lines": 931
+    },
+    "deps": {
+     "direct": 3,
+     "direct_dev": 2,
+     "total": 126,
+     "needs_bytes": 68648888,
+     "needs_note": "node_modules (incl. dev deps such as typescript) + dist"
+    },
+    "startup_ms": {
+     "files": 119.075,
+     "shell": 118.585
+    },
+    "startup_ms_range": {
+     "files": [
+      118.35,
+      122.345
+     ],
+     "shell": [
+      117.36,
+      120.39
+     ]
+    },
+    "call_us": {
+     "read_file": 235.0,
+     "list_files": 254.0,
+     "search": 737.0,
+     "write_file": 113.5,
+     "run_command": 1896.5
+    },
+    "server_rss_mb": {
+     "files": 72.14,
+     "shell": 64.3
+    },
+    "agent_fake_20_steps_ms": 412.4,
+    "agent_fake_20_steps_ms_range": [
+     403.3,
+     417.4
+    ],
+    "agent_process_rss_mb": 97.44
+   },
+   "ts-optimize": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "TS audit: OK (9 source files)"
+    },
+    "build_seconds": 3.55,
+    "source": {
+     "files": 9,
+     "lines": 1321
+    },
+    "deps": {
+     "direct": 3,
+     "direct_dev": 2,
+     "total": 126,
+     "needs_bytes": 79547524,
+     "needs_note": "node_modules (incl. dev deps such as typescript) + dist"
+    },
+    "startup_ms": {
+     "files": 81.42,
+     "shell": 81.275
+    },
+    "startup_ms_range": {
+     "files": [
+      80.705,
+      82.625
+     ],
+     "shell": [
+      80.21,
+      81.9
+     ]
+    },
+    "call_us": {
+     "read_file": 236.0,
+     "list_files": 269.5,
+     "search": 412.0,
+     "write_file": 112.0,
+     "run_command": 2009.0
+    },
+    "server_rss_mb": {
+     "files": 68.12,
+     "shell": 57.97
+    },
+    "agent_fake_20_steps_ms": 314.4,
+    "agent_fake_20_steps_ms_range": [
+     303.6,
+     317.2
+    ],
+    "agent_process_rss_mb": 95.3
+   },
+   "rs-initial": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "RS audit: OK (5 source files)"
+    },
+    "build_seconds": 75.0,
+    "source": {
+     "files": 5,
+     "lines": 1255
+    },
+    "deps": {
+     "direct": 8,
+     "total": 224,
+     "needs_bytes": 6519088,
+     "needs_note": "the release binary"
+    },
+    "startup_ms": {
+     "files": 5.89,
+     "shell": 5.49
+    },
+    "startup_ms_range": {
+     "files": [
+      5.575,
+      6.335
+     ],
+     "shell": [
+      5.36,
+      5.87
+     ]
+    },
+    "call_us": {
+     "read_file": 203.0,
+     "list_files": 171.0,
+     "search": 311.0,
+     "write_file": 108.5,
+     "run_command": 2577.5
+    },
+    "server_rss_mb": {
+     "files": 10.12,
+     "shell": 8.45
+    },
+    "agent_fake_20_steps_ms": 97.3,
+    "agent_fake_20_steps_ms_range": [
+     94.7,
+     99.8
+    ],
+    "agent_process_rss_mb": 20.08
+   },
+   "rs-optimize": {
+    "rounds": 5,
+    "verify": {
+     "hidden": "26/26 passed",
+     "audit": "RS audit: OK (8 source files)"
+    },
+    "build_seconds": 76.87,
+    "source": {
+     "files": 7,
+     "lines": 1421
+    },
+    "deps": {
+     "direct": 8,
+     "total": 224,
+     "needs_bytes": 2871792,
+     "needs_note": "the release binary"
+    },
+    "startup_ms": {
+     "files": 3.27,
+     "shell": 3.17
+    },
+    "startup_ms_range": {
+     "files": [
+      2.985,
+      3.55
+     ],
+     "shell": [
+      2.775,
+      3.21
+     ]
+    },
+    "call_us": {
+     "read_file": 200.0,
+     "list_files": 155.0,
+     "search": 304.0,
+     "write_file": 101.0,
+     "run_command": 2227.0
+    },
+    "server_rss_mb": {
+     "files": 5.09,
+     "shell": 3.67
+    },
+    "agent_fake_20_steps_ms": 94.1,
+    "agent_fake_20_steps_ms_range": [
+     92.2,
+     96.8
+    ],
+    "agent_process_rss_mb": 20.12
+   }
+  }
+ },
+ "agent_runs": {
+  "runs": 45,
+  "cost_usd_total": 1.1727,
+  "all_served_by": [
+   "Anthropic"
+  ],
+  "http_non_200": 0,
+  "by_lane": {
+   "py": {
+    "n": 15,
+    "done": 15,
+    "hidden_pass": 15,
+    "visible_pass": 15,
+    "steps": 4,
+    "steps_range": [
+     3,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 7.893,
+    "wall_s_range": [
+     6.764,
+     12.706
+    ],
+    "llm_s": 7.201,
+    "tool_ms": 81.583,
+    "outside_model_s": 0.554,
+    "outside_model_s_range": [
+     0.53,
+     0.692
+    ],
+    "outside_model_share_pct": 7.409,
+    "output_tokens": 659,
+    "cost_usd": 0.026
+   },
+   "ts": {
+    "n": 15,
+    "done": 15,
+    "hidden_pass": 15,
+    "visible_pass": 15,
+    "steps": 4,
+    "steps_range": [
+     3,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 8.835,
+    "wall_s_range": [
+     7.479,
+     10.705
+    ],
+    "llm_s": 8.636,
+    "tool_ms": 77.199,
+    "outside_model_s": 0.201,
+    "outside_model_s_range": [
+     0.195,
+     0.305
+    ],
+    "outside_model_share_pct": 2.68,
+    "output_tokens": 712,
+    "cost_usd": 0.026
+   },
+   "rs": {
+    "n": 15,
+    "done": 15,
+    "hidden_pass": 15,
+    "visible_pass": 15,
+    "steps": 4,
+    "steps_range": [
+     3,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 7.181,
+    "wall_s_range": [
+     6.422,
+     12.034
+    ],
+    "llm_s": 7.091,
+    "tool_ms": 72.273,
+    "outside_model_s": 0.087,
+    "outside_model_s_range": [
+     0.079,
+     0.107
+    ],
+    "outside_model_share_pct": 1.177,
+    "output_tokens": 712,
+    "cost_usd": 0.025
+   }
+  },
+  "by_lane_task": {
+   "py/t1-bugfix": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 4,
+    "steps_range": [
+     4,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 7.418,
+    "wall_s_range": [
+     7.257,
+     8.057
+    ],
+    "llm_s": 6.879,
+    "tool_ms": 82.607,
+    "outside_model_s": 0.572,
+    "outside_model_s_range": [
+     0.539,
+     0.634
+    ],
+    "outside_model_share_pct": 7.555,
+    "output_tokens": 649,
+    "cost_usd": 0.026
+   },
+   "py/t2-feature": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 4,
+    "steps_range": [
+     4,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 11.91,
+    "wall_s_range": [
+     10.262,
+     12.706
+    ],
+    "llm_s": 11.257,
+    "tool_ms": 81.583,
+    "outside_model_s": 0.554,
+    "outside_model_s_range": [
+     0.537,
+     0.653
+    ],
+    "outside_model_share_pct": 5.237,
+    "output_tokens": 1241,
+    "cost_usd": 0.033
+   },
+   "py/t3-failing": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 3,
+    "steps_range": [
+     3,
+     3
+    ],
+    "blocked_calls": 0,
+    "wall_s": 7.2,
+    "wall_s_range": [
+     6.764,
+     8.574
+    ],
+    "llm_s": 6.596,
+    "tool_ms": 75.345,
+    "outside_model_s": 0.534,
+    "outside_model_s_range": [
+     0.53,
+     0.692
+    ],
+    "outside_model_share_pct": 7.834,
+    "output_tokens": 643,
+    "cost_usd": 0.02
+   },
+   "ts/t1-bugfix": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 4,
+    "steps_range": [
+     4,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 7.514,
+    "wall_s_range": [
+     7.479,
+     8.311
+    ],
+    "llm_s": 7.302,
+    "tool_ms": 77.199,
+    "outside_model_s": 0.213,
+    "outside_model_s_range": [
+     0.198,
+     0.299
+    ],
+    "outside_model_share_pct": 2.829,
+    "output_tokens": 686,
+    "cost_usd": 0.026
+   },
+   "ts/t2-feature": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 4,
+    "steps_range": [
+     4,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 10.063,
+    "wall_s_range": [
+     9.269,
+     10.705
+    ],
+    "llm_s": 9.858,
+    "tool_ms": 75.444,
+    "outside_model_s": 0.199,
+    "outside_model_s_range": [
+     0.195,
+     0.305
+    ],
+    "outside_model_share_pct": 2.108,
+    "output_tokens": 1236,
+    "cost_usd": 0.032
+   },
+   "ts/t3-failing": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 3,
+    "steps_range": [
+     3,
+     3
+    ],
+    "blocked_calls": 0,
+    "wall_s": 8.835,
+    "wall_s_range": [
+     8.137,
+     9.414
+    ],
+    "llm_s": 8.636,
+    "tool_ms": 77.566,
+    "outside_model_s": 0.199,
+    "outside_model_s_range": [
+     0.195,
+     0.29
+    ],
+    "outside_model_share_pct": 2.44,
+    "output_tokens": 712,
+    "cost_usd": 0.02
+   },
+   "rs/t1-bugfix": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 4,
+    "steps_range": [
+     4,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 6.838,
+    "wall_s_range": [
+     6.745,
+     7.205
+    ],
+    "llm_s": 6.757,
+    "tool_ms": 73.485,
+    "outside_model_s": 0.09,
+    "outside_model_s_range": [
+     0.079,
+     0.107
+    ],
+    "outside_model_share_pct": 1.251,
+    "output_tokens": 693,
+    "cost_usd": 0.025
+   },
+   "rs/t2-feature": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 4,
+    "steps_range": [
+     4,
+     4
+    ],
+    "blocked_calls": 0,
+    "wall_s": 10.25,
+    "wall_s_range": [
+     9.702,
+     12.034
+    ],
+    "llm_s": 10.146,
+    "tool_ms": 72.273,
+    "outside_model_s": 0.083,
+    "outside_model_s_range": [
+     0.079,
+     0.106
+    ],
+    "outside_model_share_pct": 0.858,
+    "output_tokens": 1269,
+    "cost_usd": 0.032
+   },
+   "rs/t3-failing": {
+    "n": 5,
+    "done": 5,
+    "hidden_pass": 5,
+    "visible_pass": 5,
+    "steps": 3,
+    "steps_range": [
+     3,
+     3
+    ],
+    "blocked_calls": 0,
+    "wall_s": 6.718,
+    "wall_s_range": [
+     6.422,
+     7.225
+    ],
+    "llm_s": 6.618,
+    "tool_ms": 68.835,
+    "outside_model_s": 0.087,
+    "outside_model_s_range": [
+     0.079,
+     0.101
+    ],
+    "outside_model_share_pct": 1.351,
+    "output_tokens": 698,
+    "cost_usd": 0.02
+   }
+  }
+ }
+}

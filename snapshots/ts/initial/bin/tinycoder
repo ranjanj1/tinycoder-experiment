@@ -1,0 +1,2 @@
+#!/usr/bin/env -S node --max-semi-space-size=1
+import("node:module").then((m) => { m.enableCompileCache?.(); return import("../dist/main.js"); });

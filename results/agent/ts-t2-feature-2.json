@@ -1,0 +1,39 @@
+{
+ "id": "ts-t2-feature-2",
+ "lane": "ts",
+ "task": "t2-feature",
+ "n": 2,
+ "build": "ts-optimize",
+ "model": "claude-sonnet-5-5",
+ "route": "OpenRouter, provider pinned to Anthropic",
+ "exit_code": 0,
+ "final": {
+  "status": "done",
+  "reason": null,
+  "steps": 4,
+  "tool_calls": 6,
+  "blocked_calls": 0,
+  "input_tokens": 9904,
+  "output_tokens": 1236,
+  "wall_ms": 10055.35075,
+  "llm_ms": 9858.488374,
+  "tool_ms": 75.44445799999971,
+  "final_text": "I added `remove(name, qty)` and `total()` to `Inventory` in `inventory.py`, plus tests for both in `test_inventory.py`. All 6 tests pass, including the 3 that were already there.\n\n- **`remove`:** It raises `KeyError` if the item isn't in stock. It raises `ValueError` if `qty` isn't a positive integer or is more than the amount in stock. An item that reaches 0 is deleted, so it no longer shows up in `items()`.\n- **`total`:** It returns the sum of units across all items, and 0 for an empty inventory.\n- **`True`/`False` as `qty`:** `remove` rejects them, which the spec didn't ask for. `add` still accepts `True`, so the two methods differ there.\n- **Check order:** The item is checked first, so `remove(\"pear\", 0)` on a missing item gives `KeyError`, not `ValueError`.\n\nThe new tests cover a partial and a full removal, each error case, and `total` after an add and a remove."
+ },
+ "harness_wall_s": 10.1,
+ "visible_tests_pass": true,
+ "hidden_tests_pass": true,
+ "model_calls": 4,
+ "http_statuses": [
+  200,
+  200,
+  200,
+  200
+ ],
+ "providers": [
+  "Anthropic"
+ ],
+ "cost_usd_openrouter": 0.032168,
+ "diff_lines": 62,
+ "started": "2026-11-11T17:30:55-0500"
+}

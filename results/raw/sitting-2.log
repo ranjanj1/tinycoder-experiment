@@ -1,0 +1,44 @@
+changed since freeze: nothing
+built py-initial 0.09 {'hidden': '26/26 passed', 'audit': 'PY audit: OK (7 source files)'}
+built py-optimize 0.07 {'hidden': '26/26 passed', 'audit': 'PY audit: OK (9 source files)'}
+built ts-initial 2.29 {'hidden': '26/26 passed', 'audit': 'TS audit: OK (6 source files)'}
+built ts-optimize 3.55 {'hidden': '26/26 passed', 'audit': 'TS audit: OK (9 source files)'}
+built rs-initial 75.0 {'hidden': '26/26 passed', 'audit': 'RS audit: OK (5 source files)'}
+built rs-optimize 76.87 {'hidden': '26/26 passed', 'audit': 'RS audit: OK (8 source files)'}
+round 1 ['ts-initial', 'py-initial', 'ts-optimize', 'rs-optimize', 'rs-initial', 'py-optimize']
+  ts-initial   files 118 ms  read 235 us  agent 417 ms  tree 235 MB
+  py-initial   files 304 ms  read 581 us  agent 946 ms  tree 251 MB
+  ts-optimize  files 81 ms  read 231 us  agent 315 ms  tree 227 MB
+  rs-optimize  files 3 ms  read 200 us  agent 92 ms  tree 35 MB
+  rs-initial   files 6 ms  read 203 us  agent 95 ms  tree 44 MB
+  py-optimize  files 236 ms  read 508 us  agent 611 ms  tree 185 MB
+round 2 ['rs-optimize', 'ts-initial', 'ts-optimize', 'py-optimize', 'py-initial', 'rs-initial']
+  rs-optimize  files 4 ms  read 198 us  agent 94 ms  tree 35 MB
+  ts-initial   files 120 ms  read 230 us  agent 403 ms  tree 236 MB
+  ts-optimize  files 81 ms  read 236 us  agent 312 ms  tree 224 MB
+  py-optimize  files 238 ms  read 514 us  agent 610 ms  tree 184 MB
+  py-initial   files 302 ms  read 546 us  agent 944 ms  tree 250 MB
+  rs-initial   files 6 ms  read 234 us  agent 99 ms  tree 43 MB
+round 3 ['ts-initial', 'rs-initial', 'py-initial', 'rs-optimize', 'ts-optimize', 'py-optimize']
+  ts-initial   files 119 ms  read 248 us  agent 415 ms  tree 235 MB
+  rs-initial   files 6 ms  read 203 us  agent 95 ms  tree 42 MB
+  py-initial   files 303 ms  read 550 us  agent 957 ms  tree 253 MB
+  rs-optimize  files 3 ms  read 208 us  agent 92 ms  tree 19 MB
+  ts-optimize  files 81 ms  read 242 us  agent 304 ms  tree 208 MB
+  py-optimize  files 239 ms  read 483 us  agent 612 ms  tree 199 MB
+round 4 ['rs-initial', 'py-optimize', 'ts-initial', 'py-initial', 'rs-optimize', 'ts-optimize']
+  rs-initial   files 6 ms  read 203 us  agent 97 ms  tree 44 MB
+  py-optimize  files 238 ms  read 478 us  agent 617 ms  tree 184 MB
+  ts-initial   files 122 ms  read 232 us  agent 405 ms  tree 235 MB
+  py-initial   files 304 ms  read 566 us  agent 950 ms  tree 253 MB
+  rs-optimize  files 3 ms  read 216 us  agent 96 ms  tree 35 MB
+  ts-optimize  files 83 ms  read 241 us  agent 314 ms  tree 227 MB
+round 5 ['ts-optimize', 'rs-optimize', 'ts-initial', 'py-optimize', 'rs-initial', 'py-initial']
+  ts-optimize  files 82 ms  read 234 us  agent 317 ms  tree 228 MB
+  rs-optimize  files 3 ms  read 200 us  agent 97 ms  tree 35 MB
+  ts-initial   files 119 ms  read 240 us  agent 412 ms  tree 237 MB
+  py-optimize  files 239 ms  read 482 us  agent 609 ms  tree 190 MB
+  rs-initial   files 6 ms  read 234 us  agent 100 ms  tree 44 MB
+  py-initial   files 303 ms  read 551 us  agent 953 ms  tree 235 MB
+SITTING FINISHED sitting-2
+SITTING 2 FINISHED Wed Nov 11 17:07:05 EST 2026

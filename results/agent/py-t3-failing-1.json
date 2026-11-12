@@ -1,0 +1,38 @@
+{
+ "id": "py-t3-failing-1",
+ "lane": "py",
+ "task": "t3-failing",
+ "n": 1,
+ "build": "py-optimize",
+ "model": "claude-sonnet-5-5",
+ "route": "OpenRouter, provider pinned to Anthropic",
+ "exit_code": 0,
+ "final": {
+  "status": "done",
+  "reason": null,
+  "steps": 3,
+  "tool_calls": 4,
+  "blocked_calls": 0,
+  "input_tokens": 6678,
+  "output_tokens": 763,
+  "wall_ms": 8573.518,
+  "llm_ms": 8039.557,
+  "tool_ms": 75.345,
+  "final_text": "I rewrote `slugify` in `slug.py`, and all 6 tests in `test_slug.py` now pass. I didn't touch the tests.\n\nThe old version replaced every non-alphanumeric character with a hyphen. It never collapsed repeated hyphens, trimmed the ends, or handled accents. The new version:\n- **Accents:** It strips accents first, so \"Caf\u00e9 D\u00e9j\u00e0 Vu\" becomes \"cafe-deja-vu\". It does this by Unicode-normalizing the text and then dropping any non-ASCII characters.\n- **Collapsing:** Each run of non-alphanumeric characters becomes a single hyphen.\n- **Edges:** Leading and trailing hyphens are removed.\n- **Truncation:** After cutting to `max_len`, it strips hyphens again. This stops a cut like \"one-two-\" from keeping its trailing hyphen.\n\nCharacters with no ASCII equivalent, such as Chinese or Cyrillic letters, are dropped entirely rather than transliterated. A title made only of such characters gives an empty slug. The tests don't cover this, so I left it alone."
+ },
+ "harness_wall_s": 8.6,
+ "visible_tests_pass": true,
+ "hidden_tests_pass": true,
+ "model_calls": 3,
+ "http_statuses": [
+  200,
+  200,
+  200
+ ],
+ "providers": [
+  "Anthropic"
+ ],
+ "cost_usd_openrouter": 0.020986,
+ "diff_lines": 18,
+ "started": "2026-11-11T17:29:56-0500"
+}

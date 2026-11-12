@@ -1,0 +1,39 @@
+{
+ "id": "py-t1-bugfix-5",
+ "lane": "py",
+ "task": "t1-bugfix",
+ "n": 5,
+ "build": "py-optimize",
+ "model": "claude-sonnet-5-5",
+ "route": "OpenRouter, provider pinned to Anthropic",
+ "exit_code": 0,
+ "final": {
+  "status": "done",
+  "reason": null,
+  "steps": 4,
+  "tool_calls": 6,
+  "blocked_calls": 0,
+  "input_tokens": 9605,
+  "output_tokens": 648,
+  "wall_ms": 7685.427,
+  "llm_ms": 7104.816,
+  "tool_ms": 96.867,
+  "final_text": "I fixed the ordering in `top_words` in `textstats.py`. It now sorts by count, highest first, and breaks ties alphabetically. The sort key is `(-count, word)` instead of count alone with `reverse=True`.\n\nI added `test_top_ties_alphabetical` to `test_textstats.py`. It checks your example, `top_words(\"pear apple pear apple fig\", 3)`, against `[(\"apple\", 2), (\"pear\", 2), (\"fig\", 1)]`. All 4 tests pass, including the three that were already there."
+ },
+ "harness_wall_s": 7.7,
+ "visible_tests_pass": true,
+ "hidden_tests_pass": true,
+ "model_calls": 4,
+ "http_statuses": [
+  200,
+  200,
+  200,
+  200
+ ],
+ "providers": [
+  "Anthropic"
+ ],
+ "cost_usd_openrouter": 0.02569,
+ "diff_lines": 25,
+ "started": "2026-11-11T17:34:22-0500"
+}

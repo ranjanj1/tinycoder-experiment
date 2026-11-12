@@ -1,0 +1,39 @@
+{
+ "id": "rs-t2-feature-4",
+ "lane": "rs",
+ "task": "t2-feature",
+ "n": 4,
+ "build": "rs-optimize",
+ "model": "claude-sonnet-5-5",
+ "route": "OpenRouter, provider pinned to Anthropic",
+ "exit_code": 0,
+ "final": {
+  "status": "done",
+  "reason": null,
+  "steps": 4,
+  "tool_calls": 6,
+  "blocked_calls": 0,
+  "input_tokens": 9728,
+  "output_tokens": 1337,
+  "wall_ms": 10433.925,
+  "llm_ms": 10327.942,
+  "tool_ms": 81.587,
+  "final_text": "I added `remove(name, qty)` and `total()` to `Inventory` in `inventory.py`, plus tests for both in `test_inventory.py`. All 6 tests pass, including the 3 that were already there.\n\n- **`remove`:**\n  - It raises `KeyError` if the item isn't in stock.\n  - It raises `ValueError` if `qty` isn't a positive integer or is more than the amount in stock.\n  - An item that reaches 0 is deleted, so it no longer appears in `items()`.\n- **`total`:** it returns the sum of units across all items, and 0 for an empty inventory.\n- **Booleans:** `remove` rejects `True` and `False` as `qty`, because Python treats them as ints. The existing `add` still accepts `True`; I left it alone because you asked me to change only what the task needs.\n- **Order of checks:** a missing item raises `KeyError` even if `qty` is also invalid.\n\nThe new tests cover the following:\n- Partial and full removal.\n- The `KeyError` case.\n- Several bad quantities (0, -1, more than stock, 1.5, `True`), checking the stock is unchanged afterwards.\n- `total()` on an empty inventory and after adds and a remove."
+ },
+ "harness_wall_s": 10.4,
+ "visible_tests_pass": true,
+ "hidden_tests_pass": true,
+ "model_calls": 4,
+ "http_statuses": [
+  200,
+  200,
+  200,
+  200
+ ],
+ "providers": [
+  "Anthropic"
+ ],
+ "cost_usd_openrouter": 0.032826,
+ "diff_lines": 62,
+ "started": "2026-11-11T17:33:26-0500"
+}

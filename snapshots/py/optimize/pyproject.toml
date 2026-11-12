@@ -1,0 +1,10 @@
+[project]
+name = "tinycoder"
+version = "1.0.0"
+description = "A small coding agent built on two MCP servers (lane PY)."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "mcp==2.3.0",
+    "anthropic==2.8.0",
+]
+# Entry point: bin/tinycoder, which runs src/tinycoder/main.py directly (see BUILD.md).

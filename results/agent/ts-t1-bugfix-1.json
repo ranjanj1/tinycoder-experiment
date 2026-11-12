@@ -1,0 +1,39 @@
+{
+ "id": "ts-t1-bugfix-1",
+ "lane": "ts",
+ "task": "t1-bugfix",
+ "n": 1,
+ "build": "ts-optimize",
+ "model": "claude-sonnet-5-5",
+ "route": "OpenRouter, provider pinned to Anthropic",
+ "exit_code": 0,
+ "final": {
+  "status": "done",
+  "reason": null,
+  "steps": 4,
+  "tool_calls": 7,
+  "blocked_calls": 0,
+  "input_tokens": 9435,
+  "output_tokens": 674,
+  "wall_ms": 7690.73275,
+  "llm_ms": 7411.0712920000005,
+  "tool_ms": 74.75216699999896,
+  "final_text": "I fixed `top_words` in `textstats.py` so words with equal counts come back in alphabetical order. The tests pass.\n\nThe sort used only the count, in reverse. I changed the sort key to count descending, then word ascending.\n\nI added `test_top_ties_alphabetical` to `test_textstats.py`. It checks your example: `top_words(\"pear apple pear apple fig\", 3)` returns `[(\"apple\", 2), (\"pear\", 2), (\"fig\", 1)]`."
+ },
+ "harness_wall_s": 8.2,
+ "visible_tests_pass": true,
+ "hidden_tests_pass": true,
+ "model_calls": 4,
+ "http_statuses": [
+  200,
+  200,
+  200,
+  200
+ ],
+ "providers": [
+  "Anthropic"
+ ],
+ "cost_usd_openrouter": 0.02561,
+ "diff_lines": 25,
+ "started": "2026-11-11T17:28:54-0500"
+}

@@ -1,0 +1,32 @@
+{
+ "sitting": "sitting-1",
+ "started": "2026-11-11T16:21:30-0500",
+ "rounds": 5,
+ "seed": 20261111,
+ "machine": "macOS-26.5.2-arm64-arm-64bit",
+ "cpu": "Apple M1",
+ "mem_bytes": 8589934592,
+ "power": "Now drawing from 'AC Power'",
+ "load_before": [
+  10.17724609375,
+  6.3642578125,
+  4.53515625
+ ],
+ "harness_python": "3.9.6",
+ "measure_py_sha256": "d4d573f06c345ccc2ac222251ba4ab959afb680c591380290e24519476a7f2b1",
+ "snapshots": {
+  "py-initial": "071ed1d002e6476f4fbcadb4d9f8b91d841c0e661f3caebc3d83eb415c42999b",
+  "py-optimize": "8d6de652464be65750dc79be856d5c00c41cb2c512ed7b765b20d70c0c3fefe2",
+  "ts-initial": "8402e6593aa6de1d7732d1376ac113b62b11957fec37033b208bb3aef66afd58",
+  "ts-optimize": "58f35532f3aa21344f0e7bcae749173ff9cadc56e5db9ae6c5e780ef0c90cac4",
+  "rs-initial": "073eb803b85774f4e23467ee3ae7cea06cde4da3bb29ba3d1ed8bb780f8e9cab",
+  "rs-optimize": "96ce487b6a2964c99262caef26995ec30ed86cd074d515aafb1921ecbf474055"
+ },
+ "run_path": "/Users/Shared/tc-kit/bin-ts:/Users/Shared/tc-kit/bin-py:/usr/bin:/bin",
+ "finished": "2026-11-11T16:32:47-0500",
+ "load_after": [
+  4.32373046875,
+  7.95263671875,
+  7.0185546875
+ ]
+}

@@ -1,0 +1,37 @@
+#!/usr/bin/env -S node --max-semi-space-size=1
+// tinycoder launcher. Loads the bundle for the command being run (dist/tinycoder-<files|shell|run>.js, built by
+// src/build/bundle.ts) through vm.Script with a V8 code cache (dist/tinycoder-<name>.cache, built by
+// src/build/warm.ts). A missing or rejected cache only means V8 compiles normally. If the bundle itself is missing
+// (only `tsc` was run), it falls back to the plain compiled program, dist/main.js.
+"use strict";
+const fs = require("node:fs");
+const path = require("node:path");
+const vm = require("node:vm");
+const { createRequire } = require("node:module");
+
+const a = process.argv;
+const name = a[2] === "serve" ? (a[3] === "shell" ? "shell" : "files") : "run";
+const dist = path.join(__dirname, "..", "dist");
+const file = path.join(dist, `tinycoder-${name}.js`);
+const cacheFile = path.join(dist, `tinycoder-${name}.cache`);
+let source;
+try {
+  source = fs.readFileSync(file, "utf8");
+} catch {
+  require("node:module").enableCompileCache?.();
+  require("../dist/main.js");
+  return;
+}
+let cachedData;
+try {
+  cachedData = fs.readFileSync(cacheFile);
+} catch {}
+// The bundle file is a single function expression taking Node's CommonJS wrapper parameters.
+const script = new vm.Script(source, { filename: file, cachedData });
+source = cachedData = undefined;
+if (process.env.TINYCODER_WRITE_CODE_CACHE === name) {
+  // Build-time warm-up only: save the code compiled during this run (src/build/warm.ts).
+  process.once("exit", () => fs.writeFileSync(cacheFile, script.createCachedData()));
+}
+const mod = { exports: {} };
+script.runInThisContext().call(mod.exports, mod.exports, createRequire(file), mod, file, dist);

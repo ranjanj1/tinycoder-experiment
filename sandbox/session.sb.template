@@ -1,0 +1,20 @@
+(version 1)
+(allow default)
+; Home is closed, then only this session's workspace, its own Claude config, the Claude binary and the kit are opened (last match wins).
+(deny file-read* file-write* (subpath "/Users/agentlab") (subpath "/Users/Shared") (subpath "/Users/ranjan"))
+(allow file-read-metadata (literal "/Users") (literal "/Users/agentlab") (literal "/Users/agentlab/tc") (literal "/Users/agentlab/tccfg") (literal "/Users/Shared"))
+(allow file-read* (subpath "/Users/agentlab/.local") (subpath "/Users/Shared/tc-kit"))
+(allow file-read* file-write* (subpath "/Users/agentlab/tc/@SID@") (subpath "/Users/agentlab/tccfg/@SID@"))
+; Network: nothing leaves except through the local host filter (tools/net_filter.py), which allows api.anthropic.com only.
+(deny network-outbound)
+(allow network-outbound (remote ip "localhost:8899"))
+; The fake Messages API used by the visible tests (tests/check.py FAKE_PORTS).
+(allow network-outbound (remote ip "localhost:18401"))
+(allow network-outbound (remote ip "localhost:18402"))
+(allow network-outbound (remote ip "localhost:18403"))
+(allow network-outbound (remote ip "localhost:18404"))
+(allow network-outbound (remote ip "localhost:18405"))
+(allow network-outbound (remote ip "localhost:18406"))
+(allow network-outbound (remote ip "localhost:18407"))
+(allow network-outbound (remote ip "localhost:18408"))
+(allow network-outbound (remote unix-socket))
